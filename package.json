@@ -12,11 +12,12 @@
         "LICENSE"
     ],
     "scripts": {
-        "build": "npm run build:js && npm run build:css",
+        "build": "npm run build:js && npm run build:css && npm run copy:dist",
         "build:js": "rollup -c",
         "build:css": "npm run build:css:expanded && npm run build:css:minified",
         "build:css:expanded": "sass src/styles.scss dist/styles.css --no-source-map",
         "build:css:minified": "sass src/styles.scss dist/styles.min.css --style=compressed --no-source-map && postcss dist/styles.min.css -o dist/styles.min.css",
+        "copy:dist": "mkdir -p docs/dist && cp -r dist/* docs/dist/",
         "dev": "rollup -c -w",
         "dev:css": "onchange \"src/styles.scss\" -- npm run build:css",
         "docs:dev": "cd docs && python -m http.server 8080",

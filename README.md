@@ -1,4 +1,4 @@
-# flo-slide
+# FloSlide
 
 A lightweight, ADA compliant, and responsive carousel gallery component built with vanilla JavaScript.
 
