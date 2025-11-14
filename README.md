@@ -1,6 +1,6 @@
 # FloSlide
 
-A lightweight, ADA compliant, and responsive carousel gallery component built with vanilla JavaScript.
+A lightweight, ADA compliant, and responsive carousel gallery component built with vanilla JavaScript. [Try the demo](https://jphdevsf.github.io/flo-slide/).
 
 ## Features
 

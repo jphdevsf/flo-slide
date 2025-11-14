@@ -162,17 +162,45 @@
     }
 
     .demo-styles {
-      aspect-ratio: 3/4;
+      /* aspect-ratio: 3/4; */
       background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-      display: flex;
+      /* display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: center; */
+      text-align: center;
       color: white;
       font-size: 1.2rem;
       font-weight: bold;
       margin: 0.5rem;
+      position: relative;
     }
 
+    .demo-styles img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .demo-styles p {
+
+      margin: 0.5rem;
+      display: block;
+      font-size: 1rem;
+      font-weight: 400;
+      position: absolute;
+      text-shadow:
+        2px 2px 0 #333,
+        /* Top-left */
+        -2px 2px 0 #333,
+        /* Top-right */
+        2px -2px 0 #333,
+        /* Bottom-left */
+        -2px -2px 0 #333;
+      /* Bottom-right */
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
     /* .carousel-slide:nth-child(3n) {
             background: linear-gradient(45deg, #45b7d1, #96ceb4);
@@ -227,12 +255,6 @@
     </div>
     <div class="feature-wrapper">
       <div class="feature">
-        <h3>🎨 Minimal Styling</h3>
-        <p>Clean, minimal CSS that's ready to be customized and molded into your unique design system</p>
-      </div>
-    </div>
-    <div class="feature-wrapper">
-      <div class="feature">
         <h3>🎯 Zero Dependencies</h3>
         <p>Pure JavaScript implementation, no external dependencies required</p>
       </div>
@@ -276,40 +298,40 @@
 
       <div class="js-my-basic-carousel">
         <div class="carousel-slide">
-          <div class="demo-styles">Slide 1</div>
+          <div class="demo-styles">
+            <img src="https://static.photos/cityscape/1200x630/138" width="1200" height="630" />
+            <p>Slide 1</p>
+          </div>
         </div>
         <div class="carousel-slide">
-          <div class="demo-styles">Slide 2</div>
+          <div class="demo-styles">
+            <img src="https://static.photos/cityscape/1200x630/138" width="1200" height="630" />
+            <p>Slide 2</p>
+          </div>
         </div>
         <div class="carousel-slide">
-          <div class="demo-styles">Slide 3</div>
+          <div class="demo-styles">
+            <img src="https://static.photos/cityscape/1200x630/138" width="1200" height="630" />
+            <p>Slide 3</p>
+          </div>
         </div>
         <div class="carousel-slide">
-          <div class="demo-styles">Slide 4</div>
+          <div class="demo-styles">
+            <img src="https://static.photos/cityscape/1200x630/138" width="1200" height="630" />
+            <p>Slide 4</p>
+          </div>
         </div>
         <div class="carousel-slide">
-          <div class="demo-styles">Slide 5</div>
+          <div class="demo-styles">
+            <img src="https://static.photos/cityscape/1200x630/138" width="1200" height="630" />
+            <p>Slide 5</p>
+          </div>
         </div>
         <div class="carousel-slide">
-          <div class="demo-styles">Slide 6</div>
-        </div>
-        <div class="carousel-slide">
-          <div class="demo-styles">Slide 7</div>
-        </div>
-        <div class="carousel-slide">
-          <div class="demo-styles">Slide 8</div>
-        </div>
-        <div class="carousel-slide">
-          <div class="demo-styles">Slide 9</div>
-        </div>
-        <div class="carousel-slide">
-          <div class="demo-styles">Slide 10</div>
-        </div>
-        <div class="carousel-slide">
-          <div class="demo-styles">Slide 11</div>
-        </div>
-        <div class="carousel-slide">
-          <div class="demo-styles">Slide 12</div>
+          <div class="demo-styles">
+            <img src="https://static.photos/cityscape/1200x630/138" width="1200" height="630" />
+            <p>Slide 6</p>
+          </div>
         </div>
       </div>
 
@@ -329,40 +351,76 @@ FloSlide('.js-my-basic-carousel');
 
       <div class="js-my-fancy-carousel">
         <div class="carousel-slide">
-          <div class="demo-styles">Slide 1</div>
+          <div class="demo-styles">
+            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
+            <p>Slide 1</p>
+          </div>
         </div>
         <div class="carousel-slide">
-          <div class="demo-styles">Slide 2</div>
+          <div class="demo-styles">
+            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
+            <p>Slide 2</p>
+          </div>
         </div>
         <div class="carousel-slide">
-          <div class="demo-styles">Slide 3</div>
+          <div class="demo-styles">
+            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
+            <p>Slide 3</p>
+          </div>
         </div>
         <div class="carousel-slide">
-          <div class="demo-styles">Slide 4</div>
+          <div class="demo-styles">
+            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
+            <p>Slide 4</p>
+          </div>
         </div>
         <div class="carousel-slide">
-          <div class="demo-styles">Slide 5</div>
+          <div class="demo-styles">
+            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
+            <p>Slide 5</p>
+          </div>
         </div>
         <div class="carousel-slide">
-          <div class="demo-styles">Slide 6</div>
+          <div class="demo-styles">
+            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
+            <p>Slide 6</p>
+          </div>
         </div>
         <div class="carousel-slide">
-          <div class="demo-styles">Slide 7</div>
+          <div class="demo-styles">
+            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
+            <p>Slide 7</p>
+          </div>
         </div>
         <div class="carousel-slide">
-          <div class="demo-styles">Slide 8</div>
+          <div class="demo-styles">
+            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
+            <p>Slide 8</p>
+          </div>
         </div>
         <div class="carousel-slide">
-          <div class="demo-styles">Slide 9</div>
+          <div class="demo-styles">
+            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
+            <p>Slide 9</p>
+          </div>
         </div>
         <div class="carousel-slide">
-          <div class="demo-styles">Slide 10</div>
+          <div class="demo-styles">
+            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
+            <p>Slide 10</p>
+          </div>
         </div>
         <div class="carousel-slide">
-          <div class="demo-styles">Slide 11</div>
+          <div class="demo-styles">
+            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
+            <p>Slide 11</p>
+          </div>
         </div>
         <div class="carousel-slide">
-          <div class="demo-styles">Slide 12</div>
+          <div class="demo-styles">
+            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
+            <p>Slide 12</p>
+          </div>
         </div>
       </div>
 

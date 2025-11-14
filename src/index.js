@@ -75,20 +75,33 @@ class floSlideCore {
 
   mergeDefaults(config) {
     const defaultConfig = {
-      slidesToShow: 4,
-      slidesToScroll: 4,
+      slidesToShow: 1,
+      slidesToScroll: 1,
       arrows: false,
       fade: false,
       scrollbar: false,
       clickDrag: true,
-      dots: false,
+      dots: true,
       customArrows: null,
       hideInactiveArrows: true,
       breakpointReinit: true,
-      responsive: {}
+      responsive: {
+        // TODO: responsive default css not generating from this currently
+        // 600: {
+        //   slidesToShow: 1.5,
+        //   slidesToScroll: 1,
+        //   arrows: true,
+        //   dots: false
+        // },
+        // 1028: {
+        //   slidesToShow: 4,
+        //   slidesToScroll: 4
+        // }
+      }
     }
 
     const newConfig = { ...config }
+    newConfig.responsive = newConfig.responsive || {}
     const baseConfig = { ...defaultConfig, ...newConfig }
 
     // Ensure slidesToScroll doesn't exceed slidesToShow in base config
@@ -337,7 +350,7 @@ class floSlideCore {
 /**
  * Main function, also allows for multiple gallery inits with one selector.
  */
-const FloSlide = (selector, config) => {
+const FloSlide = (selector, config = {}) => {
   const galleries = document.querySelectorAll(selector)
   if (galleries.length === 0) return
   window.FloSlideData = window.FloSlideData || {}

@@ -513,19 +513,31 @@ var floSlideCore = /*#__PURE__*/function () {
     key: "mergeDefaults",
     value: function mergeDefaults(config) {
       var defaultConfig = {
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         arrows: false,
         fade: false,
         scrollbar: false,
         clickDrag: true,
-        dots: false,
+        dots: true,
         customArrows: null,
         hideInactiveArrows: true,
         breakpointReinit: true,
-        responsive: {}
+        responsive: {
+          // 600: {
+          //   slidesToShow: 1.5,
+          //   slidesToScroll: 1,
+          //   arrows: true,
+          //   dots: false
+          // },
+          // 1028: {
+          //   slidesToShow: 4,
+          //   slidesToScroll: 4
+          // }
+        }
       };
       var newConfig = _objectSpread2({}, config);
+      newConfig.responsive = newConfig.responsive || {};
       var baseConfig = _objectSpread2(_objectSpread2({}, defaultConfig), newConfig);
 
       // Ensure slidesToScroll doesn't exceed slidesToShow in base config
@@ -773,7 +785,8 @@ var floSlideCore = /*#__PURE__*/function () {
 /**
  * Main function, also allows for multiple gallery inits with one selector.
  */
-var FloSlide = function FloSlide(selector, config) {
+var FloSlide = function FloSlide(selector) {
+  var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
   var galleries = document.querySelectorAll(selector);
   if (galleries.length === 0) return;
   window.FloSlideData = window.FloSlideData || {};
