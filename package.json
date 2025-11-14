@@ -1,0 +1,64 @@
+{
+    "name": "flo-slide",
+    "version": "1.0.0",
+    "description": "A Lightweight, ADA compliant, and responsive carousel gallery component",
+    "type": "module",
+    "main": "dist/flo-slide.min.js",
+    "module": "src/index.js",
+    "files": [
+        "dist",
+        "src",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "npm run build:js && npm run build:css",
+        "build:js": "rollup -c",
+        "build:css": "npm run build:css:expanded && npm run build:css:minified",
+        "build:css:expanded": "sass src/styles.scss dist/styles.css --no-source-map",
+        "build:css:minified": "sass src/styles.scss dist/styles.min.css --style=compressed --no-source-map && postcss dist/styles.min.css -o dist/styles.min.css",
+        "dev": "rollup -c -w",
+        "dev:css": "onchange \"src/styles.scss\" -- npm run build:css",
+        "docs:dev": "cd docs && python -m http.server 8080",
+        "docs:build": "echo 'GitHub Pages will serve from /docs'",
+        "prepublishOnly": "npm run build"
+    },
+    "keywords": [
+        "carousel",
+        "gallery",
+        "slider",
+        "responsive",
+        "javascript",
+        "es6",
+        "lightweight",
+        "ada",
+        "compliant",
+        "client-side"
+    ],
+    "author": "jphdevsf",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jphdevsf/flo-slide.git"
+    },
+    "bugs": {
+        "url": "https://github.com/jphdevsf/flo-slide/issues"
+    },
+    "homepage": "https://jphdevsf.github.io/flo-slide/",
+    "devDependencies": {
+        "@babel/core": "^7.28.5",
+        "@babel/preset-env": "^7.28.5",
+        "@rollup/plugin-babel": "^6.1.0",
+        "@rollup/plugin-commonjs": "^29.0.0",
+        "@rollup/plugin-node-resolve": "^16.0.3",
+        "@rollup/plugin-replace": "^6.0.3",
+        "@rollup/plugin-terser": "^0.4.4",
+        "autoprefixer": "^10.4.22",
+        "cssnano": "^7.1.2",
+        "onchange": "^7.1.0",
+        "postcss": "^8.5.6",
+        "postcss-cli": "^11.0.1",
+        "rollup": "^4.53.2",
+        "sass": "^1.94.0"
+    }
+}

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flo-slide - Lightweight Carousel Gallery</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      display: block;
+      position: relative;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: block;
+      position: relative;
+    }
+
+    header {
+      background: white;
+      padding: 2rem 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    footer {
+      background: white;
+      padding: 2rem 0;
+      /* box-shadow: 2px 4px rgba(0, 0, 0, 0.1); */
+      margin-top: 2rem;
+    }
+
+    h1 {
+      color: #333;
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .subtitle {
+      color: #666;
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .demo-section {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: block;
+      position: relative;
+    }
+
+    .demo-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+
+    .code-block {
+      background: #f8f9fa;
+      border: 1px solid #e9ecef;
+      border-radius: 4px;
+      padding: 1rem;
+      margin: 1rem 0;
+      overflow-x: auto;
+    }
+
+    .code-block pre {
+      margin: 0;
+      font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+      font-size: 0.9rem;
+    }
+
+    /* .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        } */
+
+    .feature {
+      background: white;
+      padding: 1.5rem;
+      margin: 0.5rem;
+      border-radius: 8px;
+      min-height: 9rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature h3 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .installation {
+      background: #e3f2fd;
+      border-left: 4px solid #2196f3;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      margin: 0.25rem;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+
+    .btn-secondary {
+      background: #6c757d;
+    }
+
+    .btn-secondary:hover {
+      background: #545b62;
+    }
+
+    /* Responsive Code Styling */
+    code {
+      background: #f8f9fa;
+      padding: 0.2em 0.4em;
+      border-radius: 3px;
+      font-size: 0.9em;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      white-space: pre-wrap;
+      max-width: 100%;
+    }
+
+    /* Ensure table cells with code don't overflow */
+    td code {
+      display: inline-block;
+      max-width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Demo Styles */
+    .js-my-basic-carousel,
+    .js-my-fancy-carousel {
+      margin: 0;
+      /* border: 1px solid #ddd; */
+      border-radius: 4px;
+    }
+
+    .demo-styles {
+      aspect-ratio: 3/4;
+      background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 0.5rem;
+    }
+
+
+    /* .carousel-slide:nth-child(3n) {
+            background: linear-gradient(45deg, #45b7d1, #96ceb4);
+        } */
+  </style>
+  <link rel="stylesheet" href="../dist/styles.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>FloSlide</h1>
+      <p class="subtitle">A client-side content carousel library. Vanilla JS, lightweight, ADA compliant, and
+        responsive.</p>
+      <div>
+        <a href="https://github.com/jphdevsf/flo-slide" class="btn">View on GitHub</a>
+        <!-- <a href="https://www.npmjs.com/package/flo-slide" class="btn btn-secondary">NPM Package</a> -->
+      </div>
+    </div>
+  </header>
+
+  <div class="features js-features-carousel">
+    <div class="feature-wrapper">
+      <div class="feature">
+        <h3>⚡ Lightweight</h3>
+        <p>Minimal footprint with tree-shaking support for modern bundlers</p>
+      </div>
+    </div>
+    <div class="feature-wrapper">
+      <div class="feature">
+        <h3>📱 Touch Optimized</h3>
+        <p>Swipe fluidly on mobile devices with smooth touch gestures and native-like scrolling experience</p>
+      </div>
+    </div>
+    <div class="feature-wrapper">
+      <div class="feature">
+        <h3>♿ ADA Compliant</h3>
+        <p>Built with accessibility in mind, supporting keyboard navigation and screen readers</p>
+      </div>
+    </div>
+    <div class="feature-wrapper">
+      <div class="feature">
+        <h3>📱 Responsive</h3>
+        <p>Automatically adapts to different screen sizes and touch devices</p>
+      </div>
+    </div>
+    <div class="feature-wrapper">
+      <div class="feature">
+        <h3>🔧 Flexible Configuration</h3>
+        <p>Customize UI nav options like arrows, dots, and scrollbar per breakpoint</p>
+      </div>
+    </div>
+    <div class="feature-wrapper">
+      <div class="feature">
+        <h3>🎨 Minimal Styling</h3>
+        <p>Clean, minimal CSS that's ready to be customized and molded into your unique design system</p>
+      </div>
+    </div>
+    <div class="feature-wrapper">
+      <div class="feature">
+        <h3>🎯 Zero Dependencies</h3>
+        <p>Pure JavaScript implementation, no external dependencies required</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="installation">
+      <h3>🚀 Installation</h3>
+
+      <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">Install via NPM</h4>
+      <p style="margin-bottom: 0;">Coming soon!</p>
+
+      <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">From Repo (Un-minified)</h4>
+      <p style="margin-bottom: 0.5rem;">For development.</p>
+      <ol style="margin-top: 0.5rem; margin-bottom: 1rem;">
+        <li>Clone <a href="https://github.com/jphdevsf/flo-slide"
+            style="color: #2196f3; text-decoration: none;">repo</a> to local.</li>
+        <li>Copy all contents of <code>flo-slide/src/</code> to your project.</li>
+        <li>Done! Import into your larger JS codebase.</li>
+      </ol>
+
+      <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">From Repo (Minified)</h4>
+      <p style="margin-bottom: 0.5rem;">For production deployments.</p>
+      <ol style="margin-top: 0.5rem; margin-bottom: 1rem;">
+        <li>Clone <a href="https://github.com/jphdevsf/flo-slide"
+            style="color: #2196f3; text-decoration: none;">repo</a> to local.</li>
+        <li>In CLI navigate to <code>flo-slide/</code> folder.</li>
+        <li>Run <code>npm install</code>.</li>
+        <li>Run <code>npm run build</code>.</li>
+        <li>Done! Copy <code>dist/flo-slide.min.js</code> to your project.</li>
+      </ol>
+
+
+    </div>
+  </div>
+  <div class="container">
+    <div class="demo-section">
+      <h2 class="demo-title">Basic Usage</h2>
+      <p>Basic carousel with default settings:</p>
+
+      <div class="js-my-basic-carousel">
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 1</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 2</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 3</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 4</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 5</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 6</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 7</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 8</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 9</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 10</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 11</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 12</div>
+        </div>
+      </div>
+
+      <h3>Code Example</h3>
+      <div class="code-block">
+        <pre><code>// Basic usage
+FloSlide('.js-my-basic-carousel');
+</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="demo-section">
+      <h2 class="demo-title">"Kitchen Sink" Usage</h2>
+      <p>Basic carousel with default settings:</p>
+
+      <div class="js-my-fancy-carousel">
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 1</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 2</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 3</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 4</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 5</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 6</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 7</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 8</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 9</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 10</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 11</div>
+        </div>
+        <div class="carousel-slide">
+          <div class="demo-styles">Slide 12</div>
+        </div>
+      </div>
+
+      <h3>Code Example</h3>
+      <div class="code-block">
+        <pre><code>
+FloSlide('.js-my-fancy-carousel', {
+  slidesToShow: 1.25,
+  slidesToScroll: 2,
+  fade: false,
+  arrows: false,
+  dots: false,
+  scrollbar: true,
+  clickDrag: true,
+  customArrows: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#000000" fill-rule="evenodd" d="M14.5 18.5 21 12l-6.5-6.5-.707.707 5.293 5.293H3v1h16.087l-5.294 5.293.707.707Z" clip-rule="evenodd"/></svg>',
+  responsive: {
+    600: {
+      slidesToShow: 2.25,
+      slidesToScroll: 2,
+      scrollbar: false,
+      dots: true
+    },
+    1028: {
+      slidesToShow: 4,
+      slidesToScroll: 2,
+      scrollbar: false,
+      dots: true,
+      arrows: true
+    }
+  }
+})</code></pre>
+      </div>
+
+      <div style="background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 4px; padding: 1rem; margin: 1rem 0;">
+        <h4 style="margin-top: 0; color: #333;">📱 Understanding Responsive Configuration</h4>
+        <p style="margin-bottom: 0.5rem;"><strong>Mobile-Up Cascading Behavior:</strong> Configure your base options for
+          the
+          smallest devices outside the <code>responsive</code> object. As screen size increases, options cascade upward
+          and do NOT need to be set again unless you explicitly want to change that at a desired breakpoint.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="demo-section">
+      <h2 class="demo-title">Configuration Options</h2>
+      <table style="width: 100%; border-collapse: collapse;">
+        <thead>
+          <tr style="background: #f8f9fa;">
+            <th style="padding: 0.75rem; text-align: left; border: 1px solid #dee2e6;">Option</th>
+            <th style="padding: 0.75rem; text-align: left; border: 1px solid #dee2e6;">Type</th>
+            <th style="padding: 0.75rem; text-align: left; border: 1px solid #dee2e6;">Default</th>
+            <th style="padding: 0.75rem; text-align: left; border: 1px solid #dee2e6;">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><code>slidesToShow</code></td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Number</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">4</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Number of slides to show at once</td>
+          </tr>
+          <tr style="background: #f8f9fa;">
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><code>slidesToScroll</code></td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Number</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">1</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Number of slides to scroll at a time
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><code>autoplay</code></td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Boolean</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">false</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Enable automatic sliding</td>
+          </tr>
+          <tr style="background: #f8f9fa;">
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><code>autoplaySpeed</code></td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Number</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">3000</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Autoplay interval in milliseconds</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><code>arrows</code></td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Boolean</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">true</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Show navigation arrows</td>
+          </tr>
+          <tr style="background: #f8f9fa;">
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><code>dots</code></td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Boolean</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">true</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Show pagination dots</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><code>fade</code></td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Boolean</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">false</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Enable fade transition effect between slides</td>
+          </tr>
+          <tr style="background: #f8f9fa;">
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><code>scrollbar</code></td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Boolean</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">true</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Show custom scrollbar for navigation</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><code>clickDrag</code></td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Boolean</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">true</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Enable click and drag navigation</td>
+          </tr>
+          <tr style="background: #f8f9fa;">
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><code>customArrows</code></td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">String</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">null</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Custom HTML string for arrow elements (e.g., SVG)
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><code>infinite</code></td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Boolean</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">true</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Infinite loop sliding</td>
+          </tr>
+          <tr style="background: #f8f9fa;">
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><code>responsive</code></td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Array</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">[]</td>
+            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Responsive breakpoint settings</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="demo-section">
+      <h2 class="demo-title">Browser Support</h2>
+      <p>flo-slide supports all modern browsers including:</p>
+      <ul>
+        <li>Chrome 60+</li>
+        <li>Firefox 55+</li>
+        <li>Safari 12+</li>
+        <li>Edge 79+</li>
+        <li>Mobile browsers (iOS Safari, Chrome Mobile)</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div
+        style="border-top: 1px solid #dee2e6; padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div style="color: #666; font-size: 0.9rem;">
+          © 2025 jphdevsf. Released under ISC.
+        </div>
+        <div style="color: #666; font-size: 0.9rem;">
+          Built with ❤️ for the open source community
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../dist/flo-slide.min.js"></script>
+  <script>
+    FloSlide('.js-my-basic-carousel');
+    FloSlide('.js-features-carousel, .js-my-fancy-carousel', {
+      slidesToShow: 1.25,
+      slidesToScroll: 2,
+      fade: false,
+      arrows: false,
+      dots: false,
+      scrollbar: true,
+      clickDrag: true,
+      customArrows: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#000000" fill-rule="evenodd" d="M14.5 18.5 21 12l-6.5-6.5-.707.707 5.293 5.293H3v1h16.087l-5.294 5.293.707.707Z" clip-rule="evenodd"/></svg>',
+      responsive: {
+        600: {
+          slidesToShow: 2.25,
+          slidesToScroll: 2,
+          scrollbar: false,
+          dots: true
+        },
+        1028: {
+          slidesToShow: 4,
+          slidesToScroll: 2,
+          scrollbar: false,
+          dots: true,
+          arrows: true
+        }
+      }
+    })
+
+  </script>
+</body>
+
+</html>

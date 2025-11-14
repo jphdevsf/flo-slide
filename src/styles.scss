@@ -1,0 +1,157 @@
+/* Adding CSS for FloSlide */
+.flo-gallery {
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  opacity: 0;
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  transition: opacity 0.3s ease-in-out;
+
+  &.flo-slider-loaded {
+    visibility: visible !important;
+    // display: flex !important;
+    opacity: 1;
+  }
+
+  &-track-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    flex-shrink: 1;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &-track {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    -ms-overflow-style: none;
+    transition: opacity .5s ease;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    padding: 0;
+    margin: 0;
+
+
+    & .flo-slide {
+      display: block;
+      flex-shrink: 0;
+      scroll-snap-align: start;
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      display: none;
+    }
+  }
+
+  & .flo-scrollbar {
+    position: relative;
+    width: 99.5%;
+    background-color: #dddddd;
+    height: 5px;
+    margin: 6px 0.325em;
+    display: block;
+    overflow: hidden;
+  }
+
+  & .flo-scrollbar .flo-scrollbar-thumb {
+    height: 5px;
+    background-color: #afafaf;
+    position: absolute;
+    top: 0;
+  }
+
+  .arrow {
+    z-index: 1;
+    background: inherit;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    color: black;
+    width: 18px;
+    height: 60px;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 4em;
+    opacity: 0.75;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.next-arrow {
+      order: 99;
+    }
+
+    &.previous-arrow {
+      transform: rotate(180deg);
+    }
+  }
+
+  &.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .flo-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+    /* Adjust spacing as needed */
+  }
+
+  .flo-dot {
+    border: none;
+    margin: 0;
+    /* Adjust spacing between dots as needed */
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+  }
+
+  .flo-dot::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #dddddd;
+    transition: background-color 0.25s ease;
+  }
+
+  .flo-dot:hover::before {
+    background-color: #afafaf;
+  }
+
+  .flo-dot.active::before {
+    background-color: #afafaf;
+  }
+}
+
+/*! purgecss end ignore */
