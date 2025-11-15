@@ -66,14 +66,14 @@
     position: relative;
     width: 99.5%;
     background-color: #dddddd;
-    height: 5px;
+    height: 6px;
     margin: 6px 0.325em;
     display: block;
     overflow: hidden;
   }
 
   & .flo-scrollbar .flo-scrollbar-thumb {
-    height: 5px;
+    height: 6px;
     background-color: #afafaf;
     position: absolute;
     top: 0;
@@ -87,10 +87,10 @@
     text-shadow: none;
     color: black;
     width: 18px;
-    height: 60px;
+    height: 80px;
     cursor: pointer;
     padding: 0;
-    margin-bottom: 4em;
+    margin-bottom: 3em;
     opacity: 0.75;
 
     &:hover {

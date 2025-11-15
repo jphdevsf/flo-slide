@@ -513,9 +513,9 @@ var floSlideCore = /*#__PURE__*/function () {
     key: "mergeDefaults",
     value: function mergeDefaults(config) {
       var defaultConfig = {
-        slidesToShow: 3.25,
-        slidesToScroll: 1,
-        arrows: false,
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        arrows: true,
         fade: false,
         scrollbar: true,
         clickDrag: true,

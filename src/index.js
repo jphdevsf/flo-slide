@@ -75,9 +75,9 @@ class floSlideCore {
 
   mergeDefaults(config) {
     const defaultConfig = {
-      slidesToShow: 3.25,
-      slidesToScroll: 1,
-      arrows: false,
+      slidesToShow: 3,
+      slidesToScroll: 2,
+      arrows: true,
       fade: false,
       scrollbar: true,
       clickDrag: true,

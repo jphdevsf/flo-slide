@@ -13,7 +13,7 @@
   <header>
     <div class="container">
       <h1>FloSlide</h1>
-      <p class="subtitle">A client-side content carousel library. Vanilla JS, lightweight, ADA compliant, and
+      <p class="subtitle">A client-side content carousel library. Vanilla ES6 JS, lightweight, ADA compliant, and
         responsive.</p>
       <div>
         <a href="https://github.com/jphdevsf/flo-slide" class="btn">View on GitHub</a>
@@ -235,7 +235,6 @@ FloSlide('.js-my-basic-carousel');
 FloSlide('.js-my-fancy-carousel', {
   slidesToShow: 1.25,
   slidesToScroll: 2,
-  fade: false,
   arrows: false,
   dots: false,
   scrollbar: true,
@@ -263,8 +262,8 @@ FloSlide('.js-my-fancy-carousel', {
         <h4 style="margin-top: 0; color: #333;">📱 Understanding Responsive Configuration</h4>
         <p style="margin-bottom: 0.5rem;"><strong>Mobile-Up Cascading Behavior:</strong> Configure your base options for
           the
-          smallest devices outside the <code>responsive</code> object. As screen size increases, options cascade upward
-          and do NOT need to be set again unless you explicitly want to change that at a desired breakpoint.</p>
+          smallest devices outside the <code>responsive</code> object. Configured options cascade upward to larger
+          breakpoint ranges unless you explicitly defined again.</p>
       </div>
     </div>
   </div>
@@ -296,18 +295,18 @@ FloSlide('.js-my-fancy-carousel', {
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Number of slides to scroll at a time
             </td>
           </tr>
-          <tr>
+          <!-- <tr>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><code>autoplay</code></td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Boolean</td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">false</td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Enable automatic sliding</td>
-          </tr>
-          <tr style="background: #f5fffd;">
+          </tr> -->
+          <!-- <tr style="background: #f5fffd;">
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><code>autoplaySpeed</code></td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Number</td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">3000</td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Autoplay interval in milliseconds</td>
-          </tr>
+          </tr> -->
           <tr>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><code>arrows</code></td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Boolean</td>
@@ -345,12 +344,12 @@ FloSlide('.js-my-fancy-carousel', {
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Custom HTML string for arrow elements (e.g., SVG)
             </td>
           </tr>
-          <tr>
+          <!-- <tr>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><code>infinite</code></td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Boolean</td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">true</td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Infinite loop sliding</td>
-          </tr>
+          </tr> -->
           <tr style="background: #f5fffd;">
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><code>responsive</code></td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Array</td>
@@ -370,6 +369,16 @@ FloSlide('.js-my-fancy-carousel', {
         <li>Safari 12+</li>
         <li>Edge 79+</li>
         <li>Mobile browsers (iOS Safari, Chrome Mobile)</li>
+      </ul>
+
+      <h2 class="demo-title">Why?</h2>
+      <ul>
+        <li>You author UI experiences client-side and needed a basic carousel that is easy to extend as needed
+          while still adhering to ADA compliance</li>
+        <li>Your business team wants fluid swipe, but still needs navigational elements that increment slides
+          by a set number at some breakpoints.</li>
+        <li>You like ye olde <a href="https://kenwheeler.github.io/slick/">SlickJs carousel library</a>, but the jQuery
+          dependency, not so much. ¯\_(ツ)_/¯</li>
       </ul>
     </div>
   </div>
