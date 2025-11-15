@@ -5,207 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>flo-slide - Lightweight Carousel Gallery</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background: #f5f5f5;
-      display: block;
-      position: relative;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-      display: block;
-      position: relative;
-    }
-
-    header {
-      background: white;
-      padding: 2rem 0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      margin-bottom: 2rem;
-    }
-
-    footer {
-      background: white;
-      padding: 2rem 0;
-      /* box-shadow: 2px 4px rgba(0, 0, 0, 0.1); */
-      margin-top: 2rem;
-    }
-
-    h1 {
-      color: #333;
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    .subtitle {
-      color: #666;
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-    }
-
-    .demo-section {
-      background: white;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      display: block;
-      position: relative;
-    }
-
-    .demo-title {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: #333;
-    }
-
-
-    .code-block {
-      background: #f8f9fa;
-      border: 1px solid #e9ecef;
-      border-radius: 4px;
-      padding: 1rem;
-      margin: 1rem 0;
-      overflow-x: auto;
-    }
-
-    .code-block pre {
-      margin: 0;
-      font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-      font-size: 0.9rem;
-    }
-
-    /* .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        } */
-
-    .feature {
-      background: white;
-      padding: 1.5rem;
-      margin: 0.5rem;
-      border-radius: 8px;
-      min-height: 9rem;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .feature h3 {
-      margin-top: 0;
-      color: #333;
-    }
-
-    .installation {
-      background: #e3f2fd;
-      border-left: 4px solid #2196f3;
-      padding: 1rem;
-      margin: 1rem 0;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background: #007bff;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      margin: 0.25rem;
-    }
-
-    .btn:hover {
-      background: #0056b3;
-    }
-
-    .btn-secondary {
-      background: #6c757d;
-    }
-
-    .btn-secondary:hover {
-      background: #545b62;
-    }
-
-    /* Responsive Code Styling */
-    code {
-      background: #f8f9fa;
-      padding: 0.2em 0.4em;
-      border-radius: 3px;
-      font-size: 0.9em;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-      white-space: pre-wrap;
-      max-width: 100%;
-    }
-
-    /* Ensure table cells with code don't overflow */
-    td code {
-      display: inline-block;
-      max-width: 100%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    /* Demo Styles */
-    .js-my-basic-carousel,
-    .js-my-fancy-carousel {
-      margin: 0;
-      /* border: 1px solid #ddd; */
-      border-radius: 4px;
-    }
-
-    .demo-styles {
-      /* aspect-ratio: 3/4; */
-      background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-      /* display: flex;
-      align-items: center;
-      justify-content: center; */
-      text-align: center;
-      color: white;
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin: 0.5rem;
-      position: relative;
-    }
-
-    .demo-styles img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    .demo-styles p {
-
-      margin: 0.5rem;
-      display: block;
-      font-size: 1rem;
-      font-weight: 400;
-      position: absolute;
-      text-shadow:
-        2px 2px 0 #333,
-        /* Top-left */
-        -2px 2px 0 #333,
-        /* Top-right */
-        2px -2px 0 #333,
-        /* Bottom-left */
-        -2px -2px 0 #333;
-      /* Bottom-right */
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    /* .carousel-slide:nth-child(3n) {
-            background: linear-gradient(45deg, #45b7d1, #96ceb4);
-        } */
-  </style>
+  <link rel="stylesheet" href="./demo-styles.css">
   <link rel="stylesheet" href="./dist/styles.min.css">
 </head>
 
@@ -271,8 +71,8 @@
       <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">From Repo (Un-minified)</h4>
       <p style="margin-bottom: 0.5rem;">For development.</p>
       <ol style="margin-top: 0.5rem; margin-bottom: 1rem;">
-        <li>Clone <a href="https://github.com/jphdevsf/flo-slide"
-            style="color: #2196f3; text-decoration: none;">repo</a> to local.</li>
+        <li>Clone <a href="https://github.com/jphdevsf/flo-slide" style="color: text-decoration: none;">repo</a> to
+          local.</li>
         <li>Copy all contents of <code>flo-slide/src/</code> to your project.</li>
         <li>Done! Import into your larger JS codebase.</li>
       </ol>
@@ -280,14 +80,19 @@
       <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">From Repo (Minified)</h4>
       <p style="margin-bottom: 0.5rem;">For production deployments.</p>
       <ol style="margin-top: 0.5rem; margin-bottom: 1rem;">
-        <li>Clone <a href="https://github.com/jphdevsf/flo-slide"
-            style="color: #2196f3; text-decoration: none;">repo</a> to local.</li>
+        <li>Clone <a href="https://github.com/jphdevsf/flo-slide" style="color: text-decoration: none;">repo</a> to
+          local.</li>
         <li>In CLI navigate to <code>flo-slide/</code> folder.</li>
         <li>Run <code>npm install</code>.</li>
         <li>Run <code>npm run build</code>.</li>
         <li>Done! Copy <code>dist/flo-slide.min.js</code> to your project.</li>
       </ol>
 
+      <h3>Confirm Installation</h3>
+      <ol>
+        <li>Confirm <code>window.FloSlide</code> is available on the page in dev tools console.</li>
+        <li>Insure css from <code>./dist/styles.css</code> is also loaded on the page</li>
+      </ol>
 
     </div>
   </div>
@@ -299,38 +104,38 @@
       <div class="js-my-basic-carousel">
         <div class="carousel-slide">
           <div class="demo-styles">
-            <img src="https://static.photos/cityscape/1200x630/138" width="1200" height="630" />
-            <p>Slide 1</p>
+            <img src="./images/oil-green-1.jpg" width="600" height="600" />
+            <p>1</p>
           </div>
         </div>
         <div class="carousel-slide">
           <div class="demo-styles">
-            <img src="https://static.photos/cityscape/1200x630/138" width="1200" height="630" />
-            <p>Slide 2</p>
+            <img src="./images/oil-green-2.jpg" width="600" height="600" />
+            <p>2</p>
           </div>
         </div>
         <div class="carousel-slide">
           <div class="demo-styles">
-            <img src="https://static.photos/cityscape/1200x630/138" width="1200" height="630" />
-            <p>Slide 3</p>
+            <img src="./images/oil-green-3.jpg" width="600" height="600" />
+            <p>3</p>
           </div>
         </div>
         <div class="carousel-slide">
           <div class="demo-styles">
-            <img src="https://static.photos/cityscape/1200x630/138" width="1200" height="630" />
-            <p>Slide 4</p>
+            <img src="./images/oil-green-4.jpg" width="600" height="600" />
+            <p>4</p>
           </div>
         </div>
         <div class="carousel-slide">
           <div class="demo-styles">
-            <img src="https://static.photos/cityscape/1200x630/138" width="1200" height="630" />
-            <p>Slide 5</p>
+            <img src="./images/oil-green-5.jpg" width="600" height="600" />
+            <p>5</p>
           </div>
         </div>
         <div class="carousel-slide">
           <div class="demo-styles">
-            <img src="https://static.photos/cityscape/1200x630/138" width="1200" height="630" />
-            <p>Slide 6</p>
+            <img src="./images/oil-green-6.jpg" width="600" height="600" />
+            <p>6</p>
           </div>
         </div>
       </div>
@@ -352,74 +157,74 @@ FloSlide('.js-my-basic-carousel');
       <div class="js-my-fancy-carousel">
         <div class="carousel-slide">
           <div class="demo-styles">
-            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
-            <p>Slide 1</p>
+            <img src="./images/oil-green-1.jpg" width="600" height="600" />
+            <p>1</p>
           </div>
         </div>
         <div class="carousel-slide">
           <div class="demo-styles">
-            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
-            <p>Slide 2</p>
+            <img src="./images/oil-green-2.jpg" width="600" height="600" />
+            <p>2</p>
           </div>
         </div>
         <div class="carousel-slide">
           <div class="demo-styles">
-            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
-            <p>Slide 3</p>
+            <img src="./images/oil-green-3.jpg" width="600" height="600" />
+            <p>3</p>
           </div>
         </div>
         <div class="carousel-slide">
           <div class="demo-styles">
-            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
-            <p>Slide 4</p>
+            <img src="./images/oil-green-4.jpg" width="600" height="600" />
+            <p>4</p>
           </div>
         </div>
         <div class="carousel-slide">
           <div class="demo-styles">
-            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
-            <p>Slide 5</p>
+            <img src="./images/oil-green-5.jpg" width="600" height="600" />
+            <p>5</p>
           </div>
         </div>
         <div class="carousel-slide">
           <div class="demo-styles">
-            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
-            <p>Slide 6</p>
+            <img src="./images/oil-green-6.jpg" width="600" height="600" />
+            <p>6</p>
           </div>
         </div>
         <div class="carousel-slide">
           <div class="demo-styles">
-            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
-            <p>Slide 7</p>
+            <img src="./images/oil-green-7.jpg" width="600" height="600" />
+            <p>7</p>
           </div>
         </div>
         <div class="carousel-slide">
           <div class="demo-styles">
-            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
-            <p>Slide 8</p>
+            <img src="./images/oil-green-8.jpg" width="600" height="600" />
+            <p>8</p>
           </div>
         </div>
         <div class="carousel-slide">
           <div class="demo-styles">
-            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
-            <p>Slide 9</p>
+            <img src="./images/oil-green-9.jpg" width="600" height="600" />
+            <p>9</p>
           </div>
         </div>
         <div class="carousel-slide">
           <div class="demo-styles">
-            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
-            <p>Slide 10</p>
+            <img src="./images/oil-green-10.jpg" width="600" height="600" />
+            <p>10</p>
           </div>
         </div>
         <div class="carousel-slide">
           <div class="demo-styles">
-            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
-            <p>Slide 11</p>
+            <img src="./images/oil-green-11.jpg" width="600" height="600" />
+            <p>11</p>
           </div>
         </div>
         <div class="carousel-slide">
           <div class="demo-styles">
-            <img src="https://static.photos/cityscape/320x240/138" width="320" height="240" />
-            <p>Slide 12</p>
+            <img src="./images/oil-green-12.jpg" width="600" height="600" />
+            <p>12</p>
           </div>
         </div>
       </div>
@@ -454,7 +259,7 @@ FloSlide('.js-my-fancy-carousel', {
 })</code></pre>
       </div>
 
-      <div style="background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 4px; padding: 1rem; margin: 1rem 0;">
+      <div style="background: #f5fffd; border: 1px solid #e9ecef; border-radius: 4px; padding: 1rem; margin: 1rem 0;">
         <h4 style="margin-top: 0; color: #333;">📱 Understanding Responsive Configuration</h4>
         <p style="margin-bottom: 0.5rem;"><strong>Mobile-Up Cascading Behavior:</strong> Configure your base options for
           the
@@ -469,7 +274,7 @@ FloSlide('.js-my-fancy-carousel', {
       <h2 class="demo-title">Configuration Options</h2>
       <table style="width: 100%; border-collapse: collapse;">
         <thead>
-          <tr style="background: #f8f9fa;">
+          <tr style="background: #f5fffd;">
             <th style="padding: 0.75rem; text-align: left; border: 1px solid #dee2e6;">Option</th>
             <th style="padding: 0.75rem; text-align: left; border: 1px solid #dee2e6;">Type</th>
             <th style="padding: 0.75rem; text-align: left; border: 1px solid #dee2e6;">Default</th>
@@ -483,7 +288,7 @@ FloSlide('.js-my-fancy-carousel', {
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">4</td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Number of slides to show at once</td>
           </tr>
-          <tr style="background: #f8f9fa;">
+          <tr style="background: #f5fffd;">
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><code>slidesToScroll</code></td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Number</td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">1</td>
@@ -496,7 +301,7 @@ FloSlide('.js-my-fancy-carousel', {
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">false</td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Enable automatic sliding</td>
           </tr>
-          <tr style="background: #f8f9fa;">
+          <tr style="background: #f5fffd;">
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><code>autoplaySpeed</code></td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Number</td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">3000</td>
@@ -508,7 +313,7 @@ FloSlide('.js-my-fancy-carousel', {
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">true</td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Show navigation arrows</td>
           </tr>
-          <tr style="background: #f8f9fa;">
+          <tr style="background: #f5fffd;">
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><code>dots</code></td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Boolean</td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">true</td>
@@ -520,7 +325,7 @@ FloSlide('.js-my-fancy-carousel', {
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">false</td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Enable fade transition effect between slides</td>
           </tr>
-          <tr style="background: #f8f9fa;">
+          <tr style="background: #f5fffd;">
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><code>scrollbar</code></td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Boolean</td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">true</td>
@@ -532,7 +337,7 @@ FloSlide('.js-my-fancy-carousel', {
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">true</td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Enable click and drag navigation</td>
           </tr>
-          <tr style="background: #f8f9fa;">
+          <tr style="background: #f5fffd;">
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><code>customArrows</code></td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">String</td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">null</td>
@@ -545,7 +350,7 @@ FloSlide('.js-my-fancy-carousel', {
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">true</td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Infinite loop sliding</td>
           </tr>
-          <tr style="background: #f8f9fa;">
+          <tr style="background: #f5fffd;">
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><code>responsive</code></td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Array</td>
             <td style="padding: 0.75rem; border: 1px solid #dee2e6;">[]</td>

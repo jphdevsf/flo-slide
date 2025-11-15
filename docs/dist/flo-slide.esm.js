@@ -513,17 +513,18 @@ var floSlideCore = /*#__PURE__*/function () {
     key: "mergeDefaults",
     value: function mergeDefaults(config) {
       var defaultConfig = {
-        slidesToShow: 1,
+        slidesToShow: 3.25,
         slidesToScroll: 1,
         arrows: false,
         fade: false,
-        scrollbar: false,
+        scrollbar: true,
         clickDrag: true,
-        dots: true,
+        dots: false,
         customArrows: null,
         hideInactiveArrows: true,
         breakpointReinit: true,
         responsive: {
+          // TODO: responsive default css not generating from this currently
           // 600: {
           //   slidesToShow: 1.5,
           //   slidesToScroll: 1,
