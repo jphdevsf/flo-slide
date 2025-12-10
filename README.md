@@ -1,5 +1,4 @@
-# FloSlide
-
+# <img src="assets/flo-slide-icon-2.svg" width="64" height="64" /> FloSlide
 A lightweight, ADA compliant, and responsive carousel gallery component built with vanilla JavaScript. [Try the demo](https://jphdevsf.github.io/flo-slide/).
 
 ## Features
